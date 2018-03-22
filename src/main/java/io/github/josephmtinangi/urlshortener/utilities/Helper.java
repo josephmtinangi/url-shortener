@@ -9,4 +9,22 @@ public class Helper {
 
         return new ResponseEntity<>(data, code);
     }
+
+    public static boolean validateUrl(String url) {
+
+        return true;
+    }
+
+    public static String sanitizeURL(String url) {
+
+        if (url.substring(0, 7).equals("http://"))
+            url = url.substring(7);
+
+        if (url.substring(0, 8).equals("https://"))
+            url = url.substring(8);
+
+        if (url.charAt(url.length() - 1) == '/')
+            url = url.substring(0, url.length() - 1);
+        return url;
+    }
 }

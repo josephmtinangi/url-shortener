@@ -21,4 +21,5 @@ public class WelcomeController {
 
         return Helper.createResponse(output, HttpStatus.OK);
     }
+
 }
