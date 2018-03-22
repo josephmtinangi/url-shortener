@@ -38,7 +38,7 @@
                 axios.post('/api/urls/shorten', params)
                         .then(function (response) {
                             console.log(response);
-                            this.shortenedUrl = 'Here is the shorted url: ' + response.data.shortenedUrl;
+                            this.shortenedUrl = 'Here is the shortened url: ' + response.data.shortenedUrl;
                             console.log(shortenedUrl);
                         }.bind(this))
                         .catch(function (error) {
